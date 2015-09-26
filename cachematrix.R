@@ -37,7 +37,7 @@ cacheSolve <- function(x = makeCacheMatrix()) {
   # this is slightly different of the makeVector example, as I find this easier and clearer to read
   # and it eliminates the need of return()
 
-  # if m is null, get the matrix, calculate the inverse, cache the result and return the inverse
+  # if m is null, get the matrix, calculate the inverse, cache the result
   if(is.null(m)) {
     data <- x$get()
     m <- solve(data)

@@ -23,9 +23,11 @@ makeCacheMatrix <- function(x = matrix()) {
         getinverseofmatrix = getinverseofmatrix)
 }
 
-
 ## cacheSolve : returns the inverse of matrix cached in a special list (makeCacheMatrix) OR
 ##    if not cached, calculate and return the inverse of the matrix stored in 'x' 
+##    IMPORTANT : I've decided for making clear that the parameter for cacheSolve is makeCacheMatrix and
+##    not including "..." as it will not make sense for the assignment, given solve(x, ...) 
+##    will do something different of simply calculating the inverse of a matrix
 cacheSolve <- function(x = makeCacheMatrix()) {
   m <- x$getinverseofmatrix() # get the inverse of the matrix in 'x' 
   
